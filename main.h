@@ -10,10 +10,9 @@
 #define FLD_Y (RANGE_Y + FLDS_Y)
 
 #define SUBS_X FLDS_X
-#define SUBS_Y (FLD_Y+1)
+#define SUBS_Y (FLD_Y + 1)
 #define SUBE_X FLD_X
-#define SUBE_Y (SCR_Y-2)
-
+#define SUBE_Y (SCR_Y - 2)
 
 #define FALSE 0
 #define TRUE 1
@@ -23,7 +22,8 @@
 #define LEFT 3
 #define RIGHT 4
 
-typedef struct{
+typedef struct
+{
   int x;
   int y;
   int size;
@@ -32,14 +32,14 @@ typedef struct{
   int level;
   int score;
 
-}SNAKE;
+} SNAKE;
 SNAKE snake;
-typedef struct{
+typedef struct
+{
   bool field[FLD_X][FLD_Y];
   int num;
-}DOT;
+} DOT;
 DOT dot;
-
 
 int main(void);
 int ScreenSet(void);
@@ -48,4 +48,4 @@ void ScreenHelp(void);
 void RecordMenu(void);
 void Game(void);
 void field(void);
-void chara(int,char);
+void chara(int, char);
