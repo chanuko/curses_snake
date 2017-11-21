@@ -1,9 +1,9 @@
-LDLIBS=-lncursesw 
-snake: main.o ScreenSet.o Screen.o Game.o field.o chara.o
-	cc -o snake main.o ScreenSet.o Screen.o Game.o field.o chara.o -lncursesw 
+LDLIBS=-lncursesw
+snake: main.o screen_set.o screen.o game.o field.o display_character.o
+	cc -o snake main.o screen_set.o screen.o game.o field.o display_character.o -lncursesw
 main.o: main.h
-ScreenSet.o: main.h
-Screen.o: main.h
-Game.o: main.h 
+screen_set.o: main.h
+screen.o: main.h
+game.o: main.h
 field.o: main.h
-chara.o: main.h
+display_character.o: main.h
